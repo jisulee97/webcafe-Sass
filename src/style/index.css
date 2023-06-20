@@ -1,5 +1,5 @@
 body {
-  width: 100;
+  width: 15rem;
   background: yellow;
 }
 @media (max-width: 767px) {
