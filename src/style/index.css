@@ -355,4 +355,33 @@ iframe {
   height: 100%;
 }
 
+.appHeader {
+  background: yellow;
+  padding: 1rem 1.5rem;
+}
+@media (max-width: 767px) {
+  .appHeader {
+    background: #38302e;
+    color: #ffffff;
+  }
+}
+
+.logo {
+  width: 12.75rem;
+  height: 3.75rem;
+}
+.logo__link {
+  display: block;
+  height: 100%;
+  background: url(/assets/images/webcafe-logo.png) no-repeat;
+}
+
+.memberOnly {
+  background: skyblue;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: stretch;
+}
+
 /*# sourceMappingURL=index.css.map */
