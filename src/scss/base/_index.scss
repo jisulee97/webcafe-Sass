@@ -1,1 +1,4 @@
-// index.scss
+// 순서대로 캐스캐이딩 때문에 꼭 순서 구성을 잘 해야함
+@forward "normalize";
+@forward "reset";
+@forward "default";

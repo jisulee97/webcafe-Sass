@@ -1,14 +1,1 @@
-@use "./utils" as *;
-
-body{
-  width: rem(240px);
-  background: yellow;
-
-  @include mobile{
-    background: pink;
-  }
-
-  @include desktop{
-    background: skyblue;
-  }
-}
+@use "base";
