@@ -1,4 +1,5 @@
 @use "./../utils" as *;
+@use "./../components" as *;
 
 .appHeader{
   background: yellow;
@@ -46,8 +47,20 @@
 // 검색 폼
 .searchForm{
   &__group{
-    text-align: right;
     background: blue;
+    @include flexbox($justify: flex-end);
+
+    @include mobile {
+      .formInput{
+        flex-grow: 1;
+      }
+    }
+
+    @include desktop {
+      .formInput{
+        width: rem(460px);
+      }
+    }
   }
 }
 
