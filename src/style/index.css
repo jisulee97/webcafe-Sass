@@ -1,3 +1,16 @@
-
+body {
+  width: 100;
+  background: yellow;
+}
+@media (max-width: 767px) {
+  body {
+    background: pink;
+  }
+}
+@media (min-width: 768px) {
+  body {
+    background: skyblue;
+  }
+}
 
 /*# sourceMappingURL=index.css.map */

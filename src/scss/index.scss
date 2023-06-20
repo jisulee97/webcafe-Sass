@@ -1,1 +1,14 @@
-// index.scss
+@use "./utils" as *;
+
+body{
+  width: removeUnit(100px);
+  background: yellow;
+
+  @include mobile{
+    background: pink;
+  }
+
+  @include desktop{
+    background: skyblue;
+  }
+}
