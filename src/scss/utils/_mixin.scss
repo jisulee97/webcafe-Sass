@@ -1,11 +1,6 @@
 @use "./../utils/unit" as *;
 
 // 포지션 관련 믹스인
-@mixin posCenterY {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
 
 @mixin pos{
   position: absolute;
@@ -27,6 +22,12 @@
   @include pos;
   left: 50%;
   transform: translateX(-50%);
+}
+
+@mixin posBottomY{
+  @include pos;
+  top: 100%;
+  transform: translateY(-100%);
 }
 
 @mixin posCenterY{
