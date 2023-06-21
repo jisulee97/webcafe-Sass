@@ -392,6 +392,16 @@ legend {
   background-image: url(./../assets/images/sprite_main.png);
   background-repeat: no-repeat;
   padding-left: 4rem;
+  font-weight: 700;
+  font-size: 1.125rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: stretch;
+}
+.sprite [class*=enTitle] {
+  font-size: 1rem;
+  font-weight: 400;
 }
 .spriteBook {
   background-position: 0 0;
@@ -623,24 +633,25 @@ legend {
     grid-row-gap: 1rem;
     grid-template-areas: "news news news news news news news news news news news news" "book book book book twitter twitter twitter twitter twitter favorite favorite favorite" "book book book book . board board board board board board board";
   }
-}
-
-@media (min-width: 768px) {
-  .book {
+  .appMain .book {
     grid-area: book;
   }
-  .news {
+  .appMain .news {
     grid-area: news;
   }
-  .board {
+  .appMain .board {
     grid-area: board;
   }
-  .favorite {
+  .appMain .favorite {
     grid-area: favorite;
   }
-  .twitter {
+  .appMain .twitter {
     grid-area: twitter;
   }
+}
+
+.iframeWrapper {
+  aspect-ratio: 1.7777777778;
 }
 
 /*# sourceMappingURL=index.css.map */
