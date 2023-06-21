@@ -397,6 +397,7 @@ legend {
 
 @media (max-width: 767px) {
   .button--burger {
+    background: transparent;
     width: 2.25rem;
     height: 2.25rem;
     border: 0;
@@ -505,17 +506,21 @@ legend {
 }
 
 @media (max-width: 767px) {
+  .is--active .menu__list {
+    transform: none;
+  }
   .menu__list {
     background: rgba(240, 230, 140, 0.85);
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
     width: 70vw;
     height: 100vh;
     position: fixed;
     left: 0;
     top: 0;
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
+    transform: translateX(-150%);
   }
   .menu__item {
     border-bottom: 1px solid #101010;
@@ -525,7 +530,7 @@ legend {
   .menu {
     background: #988574;
   }
-  .menu__list {
+  is__active .menu__list {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
