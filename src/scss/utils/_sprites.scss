@@ -9,9 +9,9 @@ $colors: (
   "Twitter": var.$blue,
 );
 
-@each $color, $color-value in $colors {
-  .theme#{$color} {
-    color: $color-value;
+@each $section, $color in $colors {
+  .accent#{$section} {
+    color: $color;
   }
 }
 
