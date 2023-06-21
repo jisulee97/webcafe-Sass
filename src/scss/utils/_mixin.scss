@@ -82,3 +82,41 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+// 그리드 믹스인
+@mixin gridbox($column-count: 12, $column-gap: 16px, $row-gap: 0) {
+  display: grid;
+  grid-template-columns: repeat($column-count, 1fr);
+  grid-template-rows: auto;
+  grid-column-gap: $column-gap;
+  grid-row-gap: $row-gap;
+}
+
+@mixin responsIframe($w: 16, $h: 9) {
+  position: relative;
+  padding-top: math.div($h, $w) * 100%;
+  height: 0 !important;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@mixin textEllipis() {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+// Float 해제를 위한 clear 스타일 ---------------------------------------------------- /
+@mixin clearFix {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
