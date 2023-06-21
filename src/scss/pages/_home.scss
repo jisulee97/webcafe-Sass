@@ -52,7 +52,17 @@
 
   // 추천 서적
   .book {
-    
+    &__cover{
+      background: pink;
+      width: 70%;
+      @include autoMargin;
+      text-align: center;
+
+      // .svg 로 끝나는 백터이미지는 width: 100%; height: auto; 로 주어야 함
+      &Image {
+        @include respons;
+      }
+    }
   }
 
   // 새소식
@@ -62,9 +72,15 @@
     }
   }
 
+  iframe{
+    @include respons(width, 100%);
+  }
+
   // 게시판
   .board {
-   
+   &__title{
+    @include flexbox;
+   }
   }
 
   // 인기 사이트
