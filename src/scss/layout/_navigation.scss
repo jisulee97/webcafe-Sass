@@ -2,17 +2,21 @@
 
 // 메인 내비게이션
 .menu {
-  background: pink;
   @include mobile {
+    @at-root .is--active &__list {
+      transform: none;
+    }
+
     &__list {
       background: $accent-opacity-color;
-      width: 70vw;
-      height: 100vh;
       position: fixed;
       left: 0;
       top: 0;
-      @include padding(20px);
+      width: 70vw;
+      height: 100vh;
+      transform: translateX(-150%);
     }
+      @include padding(20px);
 
     &__item {
       border-bottom: 1px solid $black;
