@@ -7,13 +7,19 @@
   font-size: rem(14px);
   border-radius: rem(4px);
 
+  // 버튼의 공통 속성 지정
+
   &--fill {
     background: $brown;
     color: $white;
+
+    // button__fill 이라는 클래스를 주었을 때 속성
   }
   &--outline {
     color: $brown;
     border: 1px solid currentColor;
+
+     // button__outline 이라는 클래스를 주었을 때 속성
   }
 }
 
@@ -29,13 +35,15 @@
     @include pos;
     top: rem(65px);
     right: rem(20px);
+    // 모바일 환경에서의 햄버거 버튼 자체의 위치 지정
 
     &BarTop, &BarMiddle, &BarBottom{
       background: $white;
       width: 100%;
       height: 20%;
       border-radius: rem(10px);
-      left: 0;  
+      left: 0;
+      // 부모 너비에 딱 맞도록 지정하기 위해 %로 크기 조정
     }
 
     &BarTop{
@@ -50,9 +58,11 @@
     &BarBottom{
       @include posBottomY;
     }
+    // 햄버거 버튼 박스 안 각각의 요소들을 mixin 을 각각 이용하여 위치 지정
   }
 
   @include desktop{
     display: none;
   }
+  // 데스크탑에선 보이지 않도록 지정
 }

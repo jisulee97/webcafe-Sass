@@ -8,6 +8,7 @@ $rootUnit: 16px !default;
 @function removeUnit($value) {
   // @return ($value / ($value * 0 + 1));
   @return math.div($value, $value * 0 + 1);
+  // 100px을 넣으면 100px * 0 + 1 을 연산할 시 1px이 나오고 100px / 1px 을 하면 단위가 사라지고 100만 남게됨
 }
 
 // px을 rem 단위로 변경하는 함수 ------------------------------------------------------- /

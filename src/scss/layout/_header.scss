@@ -3,20 +3,22 @@
 
 .appHeader{
   padding: rem(16px) rem(20px);
+  // rem 함수를 이용하여 단위 변환
   @include flexbox(column);
+  // flexbox mixin을 만들었고 정렬 방향을 column으로 변경
   gap: rem(16px);
 
   @include mobile {
     background: $dark-brown;
     color: $white;
-
+    // 모바일 환경에서 배경색과 글자색 변경
   }
 
   @include desktop {
     position: relative;
     @include containerMax;
+    // containerMax 믹스인을 만들었고 값을 주지 않아도 적용되게 하는? 최대 너비 디폴트값도 같이 지정해주고 그 외는 변수로 지정하게끔 설정
   }
-
 }
 
 // 로고
@@ -28,19 +30,22 @@
     height: 100%;
     background: url(/assets/images/webcafe-logo.png) no-repeat;
   }
-
+  // 로고 크기 지정 및 & 선택자 사용하여 logo__link 부분 스타일링
   @include desktop {
     @include posCenterY;
   }
+  // 데스크탑에서 만들어둔 mixin 으로 위치 조정
 }
 
 // 멤버 서비스
 .memberOnly{
   @include flexbox($justify: flex-end);
+  // 멤버 온리 ul 태그를 mixin flexbox 로 스타일 지정하고 정렬만 flex-end 로 변경
 
   @include mobile{
     order: -1;
   }
+  // column 방향으로 정렬돼있기 때문에 모바일에서는 .memberonly 에 order의 디폴트값은 0이므로 -1을 주어 우선 배치할 수 있도록 설정
 }
 
 // 검색 폼
@@ -48,16 +53,19 @@
   &__group{
     @include flexbox($justify: flex-end);
     gap: rem(16px);
-
+    // 멤버온리와 같이 mixin flexbox 로 스타일 지정하고 정렬만 flex-end 로 변경 
     @include mobile {
       .formInput{
         flex-grow: 1;
       }
+      // formInput 는 모바일환경에서 창이 늘어나야 하기 때문에 flex-grow 로 formInput 태그 전체 영역을 차지하도록 지정
+      // 이때, formInput 안의 formInput__input 의 크기를 100%로 지정하여 부모너비에 맞게 설정해주어야 함
     }
 
     @include desktop {
       .formInput{
         width: rem(400px);
+        // 데스크탑 환경에서는 검색창이 400px로 고정되게 함
       }
     }
   }
