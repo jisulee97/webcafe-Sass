@@ -53,15 +53,26 @@
   // 추천 서적
   .book {
     &__cover{
-      background: pink;
       width: 70%;
       @include autoMargin;
       text-align: center;
 
       // .svg 로 끝나는 백터이미지는 width: 100%; height: auto; 로 주어야 함
-      &Image {
-        @include respons;
-      }
+      // &Image {
+      //   @include respons;
+      // }
+
+    }
+
+    &__info{
+      @include flexbox($wrap: wrap, $justify: center);
+      column-gap: rem(8px);
+    }
+
+    @at-root .ratingStar{
+      text-align: center;
+      width: 100%;
+      font-size: rem(36px);
     }
   }
 
@@ -71,10 +82,7 @@
       @include ratio(16, 9);
     }
   }
-
-  iframe{
-    @include respons(width, 100%);
-  }
+  
 
   // 게시판
   .board {

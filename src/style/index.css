@@ -651,24 +651,26 @@ legend {
 }
 
 .book__cover {
-  background: pink;
   width: 70%;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
 }
-.book__coverImage {
-  max-width: 100%;
-  height: auto;
+.book__info {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: stretch;
+  column-gap: 0.5rem;
+}
+.ratingStar {
+  text-align: center;
+  width: 100%;
+  font-size: 2.25rem;
 }
 
 .iframeWrapper {
   aspect-ratio: 1.7777777778;
-}
-
-iframe {
-  width: 100%;
-  height: 100%;
 }
 
 .board__title {
