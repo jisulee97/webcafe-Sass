@@ -504,23 +504,35 @@ legend {
   }
 }
 
+@media (max-width: 767px) {
+  .menu__list {
+    background: rgba(240, 230, 140, 0.85);
+    width: 70vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+  .menu__item {
+    border-bottom: 1px solid #101010;
+  }
+}
 @media (min-width: 768px) {
   .menu {
     background: #988574;
-    display: block;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
   }
   .menu__list {
-    max-width: 64rem;
-    margin-left: auto;
-    margin-right: auto;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: stretch;
+    max-width: 64rem;
+    margin-left: auto;
+    margin-right: auto;
     padding-left: 0.25rem;
     padding-right: 0.25rem;
     padding-top: 1rem;
@@ -529,6 +541,13 @@ legend {
     font-size: 1.125rem;
     font-weight: 700;
   }
+}
+.menu__link {
+  display: block;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 /*# sourceMappingURL=index.css.map */
