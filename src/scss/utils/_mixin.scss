@@ -55,7 +55,7 @@
 
 @mixin paddingY($spacing){
   padding-top: rem($spacing);
-  padding-buttom: rem($spacing);
+  padding-bottom: rem($spacing);
 }
 
 @mixin margin($spacing){
